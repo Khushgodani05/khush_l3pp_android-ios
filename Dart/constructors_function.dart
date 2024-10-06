@@ -59,8 +59,12 @@ void main() {
     Bio user=Bio();
     print("User-id : ${user.userid()} Username : ${user.username("Khush")}");
     Bio user1=Bio();
+    print(user1.name);
     print("User-id : ${user1.userid()} Username : ${user1.username("Vinayak sir")}");
     print("User-id : ${user.userid()} Username : ${user.username("Satyendra sir")}");
     print("User-id : ${user.userid()} Username : ${user1.username("Vedant bhaiya")}");
+    print(user1.hashCode);
+    print(user.hashCode);
+
 
 }

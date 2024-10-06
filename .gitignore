@@ -42,5 +42,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
- 
- 
+
+Android_dev_l3pp/android/app/debug
+
