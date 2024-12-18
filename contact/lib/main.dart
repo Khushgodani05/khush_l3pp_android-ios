@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main(){
    runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: Maincontact(),
   ));
 }
@@ -48,7 +49,10 @@ void addcontact(){
         TextButton(onPressed:() =>{addnewcontact(textController.text),
         Navigator.pop(context),
         },
-         child: const Text("Add")
+         child: const Text("Add",
+         style: TextStyle(
+          color: Colors.blue
+         ),)
          ),
         TextButton(onPressed:() =>{
         Navigator.pop(context),
@@ -114,6 +118,7 @@ Widget build(BuildContext context) {
         ),
       ),
       ),
+      
     );
   }
   
