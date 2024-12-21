@@ -1,5 +1,6 @@
 
 import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Todo {
@@ -22,7 +23,7 @@ class Todo {
   }
 }
 
-class TodoProvider{
+class TodoProvider extends ChangeNotifier{
   List<Todo> _todos=[];
   List<Todo> get todos=> _todos;
 
@@ -47,9 +48,12 @@ class TodoProvider{
   
 
   Future<void> addTask(String title) async{
+     if(title.trim().isNotEmpty){
       final newTodo=Todo(id: DateTime.now().toString(), todoTask: title);
       _todos.add(newTodo);
+     }
       _saveData();
+      notifyListeners();
   }
 
   Future<void> toggleTodoStatus(String id) async{
@@ -58,6 +62,13 @@ class TodoProvider{
        _todos[index].isCompleted= !_todos[index].isCompleted;
        }
        _saveData();
+       notifyListeners();
+  }
+
+  Future<void> removeTask(String id) async{
+    _todos.removeWhere((todo)=>todo.id==id);
+    _saveData();
+    notifyListeners();
   }
 
 }

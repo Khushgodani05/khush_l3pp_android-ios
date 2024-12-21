@@ -15,22 +15,28 @@ class TodoScreen extends StatelessWidget{
         ),
         body: Column(
           children: [
-            Row(
-              children: [
-                TextField(
-                  controller: texter,
-                  decoration:const  InputDecoration(
-                    hintText: "Enter your new task here!",
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: texter,
+                      decoration:const  InputDecoration(
+                        hintText: "Enter your new task here!",
+                      ),
+                    ),
                   ),
+                  IconButton(
+                  icon: const Icon(Icons.add),
+                  onPressed:(){
+                    todoProvider.addTask(texter.text);
+                    texter.clear();
+                  }
+                  )
+                ],
                 ),
-                FloatingActionButton(child: Text("Add Task"),
-                onPressed:(){
-                  todoProvider.addTask(texter.text);
-                  texter.clear();
-                }
-                )
-              ],
-              ),
+            ),
               Expanded(
                 child: todoProvider.todos.isEmpty ?
                 const Text("No tasks yet!")
@@ -43,8 +49,12 @@ class TodoScreen extends StatelessWidget{
                         todoProvider.toggleTodoStatus(todos.id);
                     }
                     ),
-                    title: Text(todos.todoTask),
-                    trailing: IconButton(onPressed: onPressed, icon: icon),
+                    title: Text(todos.todoTask,
+                    style:TextStyle(
+                      decoration: todos.isCompleted? TextDecoration.lineThrough:TextDecoration.none,
+                    )
+                    ),
+                    trailing: IconButton(onPressed: ()=>todoProvider.removeTask(todos.id), icon:const  Icon(Icons.delete)),
                   );
                 }
                 )
