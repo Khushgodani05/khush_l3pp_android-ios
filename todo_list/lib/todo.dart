@@ -37,6 +37,7 @@ class TodoProvider extends ChangeNotifier{
     if(todoString != null){
       final List<dynamic> todoList=jsonDecode(todoString);
       _todos=todoList.map((todo)=>Todo.fromMap(todo)).toList();
+      notifyListeners();
     }
   }
 
