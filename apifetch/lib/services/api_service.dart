@@ -1,13 +1,13 @@
 import 'dart:convert';
 
-import 'package:apifetch/user_model.dart';
+import 'package:apifetch/model/user_model.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
   final String url= "https://randomuser.me/api";
 
 Future<List<User>>  fetchUsers() async {
-    final result= await http.get(Uri.parse("$url?result=10"));
+    final result= await http.get(Uri.parse("$url?results=50"));
     
     if(result.statusCode==200){
        List<dynamic> response= json.decode(result.body)['results'];

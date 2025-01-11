@@ -22,6 +22,20 @@ class HomeScreen extends StatelessWidget{
           ),
           ),
         ),
+        actions: [
+          ElevatedButton(
+            onPressed:()=> userProvider.getFilteredUser("male"), 
+            child: Text("Male"),
+            ),
+            ElevatedButton(
+            onPressed:()=> userProvider.getFilteredUser("female"), 
+            child: Text("Female"),
+            ),
+            ElevatedButton(
+            onPressed:()=> userProvider.getFilteredUser("all"), 
+            child: Text("all"),
+            ),
+        ],
       ),
       body: userProvider.loadingUser? const Center(
       child: Row(

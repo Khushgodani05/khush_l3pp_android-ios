@@ -14,5 +14,5 @@ void main(){
         home: const HomeScreen(),
       ),
       )
-  );
+  );  
 }

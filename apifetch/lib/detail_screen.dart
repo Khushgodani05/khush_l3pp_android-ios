@@ -1,6 +1,5 @@
 import 'package:apifetch/get_icons.dart';
-import 'package:apifetch/user_model.dart';
-import 'package:flutter/gestures.dart';
+import 'package:apifetch/model/user_model.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -38,13 +37,11 @@ class DetailScreen extends StatelessWidget {
         ),
           SizedBox(height: 50),
           SingleChildScrollView(
-          dragStartBehavior: DragStartBehavior.start,
           padding: EdgeInsets.all(16),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children:[
                 GetIcons.logo("name"),
                 Text(": ${selecteduser.name}",
@@ -56,7 +53,7 @@ class DetailScreen extends StatelessWidget {
                 ]
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children:[
                 GetIcons.logo("email"),
                 Text(": ${selecteduser.email}",
@@ -68,7 +65,7 @@ class DetailScreen extends StatelessWidget {
                 ]
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children:[
               Row(
                 children: [
@@ -86,7 +83,7 @@ class DetailScreen extends StatelessWidget {
               ]
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children:[
                 GetIcons.logo("country"),
                 Text(": ${selecteduser.country}",
@@ -98,7 +95,7 @@ class DetailScreen extends StatelessWidget {
                 ]
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children:[
                 GetIcons.logo("phone"),
                Text(": ${selecteduser.phone}",
@@ -110,7 +107,7 @@ class DetailScreen extends StatelessWidget {
                 ]
               ),
                Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children:[
               GetIcons.logo("coordinates"),
               Text(": ${selecteduser.coordinates}",
