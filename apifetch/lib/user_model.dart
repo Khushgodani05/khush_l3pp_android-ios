@@ -78,7 +78,7 @@ class User{
     return User(
       name: map['name']['title'] + " " +map['name']['first'] + " " + map['name']['last'], 
       email: map['email'],  
-      picture: map['picture']['medium'], 
+      picture: map['picture']['large'], 
       gender: map['gender'], 
       country: map['location']['country'], 
       coordinates: map['location']['coordinates']['latitude'] + " " + map['location']['coordinates']['longitude'], 

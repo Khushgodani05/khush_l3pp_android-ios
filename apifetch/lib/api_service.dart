@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 class ApiService {
   final String url= "https://randomuser.me/api";
 
-  fetchUsers() async {
+Future<List<User>>  fetchUsers() async {
     final result= await http.get(Uri.parse("$url?result=10"));
     
     if(result.statusCode==200){
