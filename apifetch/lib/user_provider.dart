@@ -34,6 +34,7 @@ void getFilteredUser(String gender){
       _users=_filteredUser;
     }else if(gender=="female"){
       _filteredUser=alluser.where((user)=>user.gender=="female").toList();
+      _users=_filteredUser;
     }else{
       _users=alluser;
     }

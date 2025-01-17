@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:sqflite/sqflite.dart';
 import 'package:todolist_2/core/database/local_database.dart';
+import 'package:todolist_2/modules/todo/model/get_todo_request_model.dart';
 import 'package:todolist_2/modules/todo/model/get_todo_response_model.dart';
 import 'package:todolist_2/modules/todo/model/todo_model.dart';
 
@@ -24,7 +25,7 @@ class TodoLocalDatabaseService {
      }
   }
 
-  Future<GetTodoResponseModel?> getAllTodos({
+  Future<GetTodoResponseModel?> getAllTodos(GetTodoRequestModel request, {
     int limit =14,
     int offset =0,
   }) async{
