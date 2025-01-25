@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "217011573829",
+    "project_id": "fir-authentication-1887c",
+    "storage_bucket": "fir-authentication-1887c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217011573829:android:0d81156af3e69cf0a5bf2c",
+        "android_client_info": {
+          "package_name": "com.example.firebase_google_authentications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217011573829-kdivo7i981gm2jba5sg6bmeeh5njot1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL00M3FBC2531yoZveFnzOoVk4Qu5RuyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217011573829-kdivo7i981gm2jba5sg6bmeeh5njot1t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "217011573829-l98b0ncu3tn1glnh662nnk84fi620k1g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.firebaseGoogleAuthentications"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
