@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_google_authentications/services/auth_service.dart';
+import 'package:firebase_google_authentications/modules/authorization/services/auth_service.dart';
 import 'package:flutter/foundation.dart';
 
 class AuthViewModel  extends ChangeNotifier{

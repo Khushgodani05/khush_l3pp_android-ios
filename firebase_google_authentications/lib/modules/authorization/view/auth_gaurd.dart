@@ -1,6 +1,6 @@
-import 'package:firebase_google_authentications/Home/view/home_screen.dart';
-import 'package:firebase_google_authentications/view/auth_screen.dart';
-import 'package:firebase_google_authentications/view_model/auth_view_model.dart';
+import 'package:firebase_google_authentications/modules/Home/view/home_screen.dart';
+import 'package:firebase_google_authentications/modules/authorization/view/auth_screen.dart';
+import 'package:firebase_google_authentications/modules/authorization/view_model/auth_view_model.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 

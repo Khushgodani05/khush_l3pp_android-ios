@@ -1,4 +1,4 @@
-import 'package:firebase_google_authentications/view_model/auth_view_model.dart';
+import 'package:firebase_google_authentications/modules/authorization/view_model/auth_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
