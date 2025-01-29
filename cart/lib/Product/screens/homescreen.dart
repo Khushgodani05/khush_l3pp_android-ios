@@ -1,13 +1,13 @@
-import 'package:cart/Product/product.dart';
-import 'package:cart/screens/cartscreen.dart';
+import 'package:cart/Product/products.dart';
+import 'package:cart/Product/screens/cartscreen.dart';
 import 'package:flutter/material.dart';
 
 
-List<Product> products=[
-    Product(id: 1,  price: 700, name: "Iphone", quantity: 0,imageLink: "iphone16.jpg"),
-    Product(id: 2, price: 600, name: "Samsung S24", quantity: 0,imageLink: "SamsungS24.jpg"),
-    Product(id: 3, price: 450, name: "Vivo V20", quantity: 0, imageLink: "VivoV20.jpg"),
-    Product(id: 4, price: 350, name: "Oppo F11", quantity: 0, imageLink: "oppof11.jpg")
+List<Productes> products=[
+    Productes(id: 1,  price: 700, name: "Iphone", quantity: 0,imageLink: "iphone16.jpg"),
+    Productes(id: 2, price: 600, name: "Samsung S24", quantity: 0,imageLink: "SamsungS24.jpg"),
+    Productes(id: 3, price: 450, name: "Vivo V20", quantity: 0, imageLink: "VivoV20.jpg"),
+    Productes(id: 4, price: 350, name: "Oppo F11", quantity: 0, imageLink: "oppof11.jpg")
 ];
 
 class Homescreen extends StatefulWidget{
@@ -29,7 +29,7 @@ class _ShoppingApp extends State<Homescreen>{
             fontSize: 18,
           ),
           ),
-          Text("${Product.currency}${products[index].price}",
+          Text("${Productes.currency}${products[index].price}",
           style: const TextStyle(
             fontSize: 13,
           ),
@@ -104,7 +104,7 @@ products[index].quantity=products[index].quantity+1;
               ),
               );
             },
-           child: const Icon(Icons.shopping_bag, color: Colors.blue,),
+           child: const Icon(Icons.shopping_bag, color: Colors.red,),
            ),
        
       );

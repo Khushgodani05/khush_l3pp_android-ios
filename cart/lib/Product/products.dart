@@ -1,4 +1,4 @@
-class Product{
+class Productes{
   final int id;
   final double price;
   final String name;
@@ -6,7 +6,7 @@ class Product{
   int quantity;
   String imageLink;
 
-  Product({
+  Productes({
     required this.id,
     required this.price,
     required this.name,
@@ -15,6 +15,7 @@ class Product{
   }
   );
 
+ 
 
 }
 

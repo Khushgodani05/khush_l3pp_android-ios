@@ -1,5 +1,5 @@
-import 'package:cart/Product/product.dart';
-import 'package:cart/screens/homescreen.dart';
+import 'package:cart/Product/products.dart';
+import 'package:cart/Product/screens/homescreen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -24,7 +24,7 @@ class _Cartscreen extends State<Cartscreen> {
             fontSize: 18,
           ),
           ),
-          Text("${Product.currency}${products[index].price}",
+          Text("${Productes.currency}${products[index].price}",
           style: const TextStyle(
             fontSize: 13,
           ),
@@ -38,6 +38,7 @@ class _Cartscreen extends State<Cartscreen> {
       
     });
 products[index].quantity=products[index].quantity+1;
+  return products;
   }
 
   removeItem(int index){
@@ -57,26 +58,19 @@ products[index].quantity=products[index].quantity+1;
             ],
           ),
         ),
-        body:cartListBuilder(),
+        body:cartListBuilder(products),
       );
    
   }
 
-  ListView cartListBuilder() {
+  ListView cartListBuilder(List<Productes> prod) {
     return ListView.separated(itemCount: products.length,
       itemBuilder: (context,index){
         if(products[index].quantity>0){
         return cartListTile(index);
       }
         else {
-         return const Text("No items in the cart",
-          style: TextStyle(
-          fontFamily: "khush",
-          fontSize: 20,
-          fontWeight: FontWeight.w500,
-        ),
-        );
-      
+         return const SizedBox();
         }
       },
       separatorBuilder:(BuildContext context, int index){
