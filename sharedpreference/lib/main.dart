@@ -1,4 +1,6 @@
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -25,7 +27,13 @@ class _SharedPref extends State<Myapp> {
     final pref=await SharedPreferences.getInstance();
     setState(() {
       thoughtOfTheDay=pref.getString("thought")?? "No data available";
+      log(thoughtOfTheDay);
     });
+  }
+  @override
+  void initState(){
+    super.initState();
+    _loadData();
   }
 
 
