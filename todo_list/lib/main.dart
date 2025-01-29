@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:todo_list/todo.dart';
-import 'package:todo_list/todo_screen.dart';
+import 'package:todo_list/view/todo_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_list/view_model/todo_provider.dart';
 
 void main(){
   runApp(ChangeNotifierProvider(
