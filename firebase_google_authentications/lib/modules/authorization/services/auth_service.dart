@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -6,7 +8,8 @@ class AuthService {
   final _googlesignin=GoogleSignIn();
   final _firebaseauth= FirebaseAuth.instance;
 
-  Future<User?>getUser() async{
+  User? getUser(){
+    log(_firebaseauth.currentUser as String);
     return _firebaseauth.currentUser;
   }
 

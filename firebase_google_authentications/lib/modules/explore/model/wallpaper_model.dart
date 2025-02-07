@@ -37,4 +37,18 @@ class WallpaperModel {
   alt: map['alt'] as String,
   );
  }
+
+ Map<String,dynamic>toMap(){
+    return{
+      'id':id,
+      'width':width,
+      'height':height,
+      'url':url,
+      'photographerUrl':photographerUrl,
+      'photographerId':photographerId,
+      'avgColour':avgColour,
+      'src':src,
+      'alt':alt,
+    };
+ }
 }

@@ -7,9 +7,9 @@ class ExplorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: const ExploreWallpaperGridviewBuilder(),
+      child: const Padding(
+        padding:  EdgeInsets.all(8.0),
+        child:  ExploreWallpaperGridviewBuilder(),
       ), 
       onRefresh: ()async{}
       );
