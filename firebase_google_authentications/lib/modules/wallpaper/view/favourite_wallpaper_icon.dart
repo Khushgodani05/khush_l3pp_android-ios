@@ -10,7 +10,7 @@ class FavouriteWallpaperIcon extends StatelessWidget {
     return Selector<WallpaperViewModel,bool?>(
       selector: (context,vm)=> vm.isFavourite,
       builder: (context,isFavourite,child){
-       if(isFavourite== null) return const SizedBox();
+       if(isFavourite== null) return const SizedBox(child:Text("khush"));
        return IconButton(
         onPressed: (){
           context.read<WallpaperViewModel>().addToFavouriteClickEvent();

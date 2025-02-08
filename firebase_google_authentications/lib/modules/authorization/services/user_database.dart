@@ -10,7 +10,9 @@ Future<UserModel?> createUser(UserModel model)async {
   try {
   final ref=_client.collection('users').doc(model.id);
   await ref.set(model.toMap());
+   log(ref as String);
   return model;
+ 
 } on Exception catch (e,s) {
   log('createUser', name: '$runtimeType', error: e, stackTrace: s);
       return null;

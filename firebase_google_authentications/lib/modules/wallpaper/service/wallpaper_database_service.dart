@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_google_authentications/modules/authorization/services/auth_service.dart';
 import 'package:firebase_google_authentications/modules/explore/model/wallpaper_model.dart';
@@ -10,6 +12,7 @@ class WallpaperDatabaseService {
  DocumentReference<Map<String, dynamic>>? wallpaperRef(WallpaperModel model){
     final currentUser=_authService.getUser();
     if(currentUser == null) return null;
+    log("Got wallapaper reference model id");
     return _client
     .collection('users')
     .doc(currentUser.uid)
@@ -27,6 +30,7 @@ class WallpaperDatabaseService {
   final ref=wallpaperRef(model);
   if(ref==null) return;
   await ref.set(model.toMap());
+  log("Added to favourite");
  }
 
 Future<void> removeFromFavourite(WallpaperModel model)async {

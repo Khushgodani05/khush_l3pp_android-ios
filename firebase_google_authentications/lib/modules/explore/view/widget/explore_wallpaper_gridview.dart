@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class ExploreWallpaperGridView extends StatelessWidget {
   const ExploreWallpaperGridView({super.key,
-  required this.wallpapers });
+  required this.wallpapers, });
 
   final List<WallpaperModel> wallpapers;
 

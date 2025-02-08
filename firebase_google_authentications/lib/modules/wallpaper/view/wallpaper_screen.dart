@@ -18,7 +18,7 @@ class _WallpaperScreenState extends State<WallpaperScreen> {
   void initState(){
     super.initState();
     Future.microtask((){
-      if(mounted) context.read<WallpaperViewModel>().isFavourite;
+      if(mounted) context.read<WallpaperViewModel>().checkIsFavourite();
     }
     );
   }
@@ -29,13 +29,13 @@ class _WallpaperScreenState extends State<WallpaperScreen> {
       appBar: AppBar(
         title: const Text('Wallpaper'),
         actions:  [
-          FavouriteWallpaperIcon(),
           const SizedBox(width: 24,),
           IconButton(
             onPressed: (){
               context.read<WallpaperViewModel>().addToFavouriteClickEvent();
             }, icon: const Icon(Icons.favorite_rounded)
             ),
+            const FavouriteWallpaperIcon(),
         ],
       ),
     body: Container(
